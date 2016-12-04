@@ -20,16 +20,18 @@ source:
 
 build:
   number: 1
+  script_env:
+    - AMBER_BUILD_TASK # {'ambermini', 'ambertools, ''}, default is build ambermini
 
 requirements:
   build:
     - zlib
     - bzip2
-    - gfortran
+    - python
+    - mingwpy [win]
   run:
     - zlib
     - bzip2
-    - gfortran
     - python
 
 about:
